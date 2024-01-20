@@ -9,14 +9,21 @@ const ListOfUsers = () => {
   const [page, setPage] = useState(0);
   const [rowsPerPage, setRowsPerPage] = useState(5);
 
+  const headers = {
+    'Access-Control-Allow-Origin': "*",
+    'Access-Control-Allow-Methods': "*",
+    'Access-Control-Allow-Headers': "*",
+
+  }
+  
   useEffect(() => {
-    axios.get('http://localhost:3001/users')
+    axios.get('https://antoineghaddad.github.io/receipt-app/data/users', { headers })
       .then(response => setUsers(response.data))
       .catch(error => console.error('Error fetching users:', error));
   }, []);
 
   const updateUser = (updatedUser) => {
-    axios.put(`http://localhost:3001/users/${updatedUser.id}`, updatedUser)
+    axios.put(`https://antoineghaddad.github.io/receipt-app/data/users/${updatedUser.id}`, updatedUser, { headers })
       .then(response => {
         setUsers(users.map(user => (user.id === updatedUser.id ? response.data : user)));
       })
@@ -24,7 +31,7 @@ const ListOfUsers = () => {
   };
 
   const deleteUser = (userId) => {
-    axios.delete(`http://localhost:3001/users/${userId}`)
+    axios.delete(`https://antoineghaddad.github.io/receipt-app/data/users/${userId}`, { headers })
       .then(() => {
         setUsers(users.filter(user => user.id !== userId));
       })
