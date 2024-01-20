@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/receipt-app/static/css/main.31d6cfe0.css",
+    "main.js": "/receipt-app/static/js/main.06418c6d.js",
+    "static/js/787.2960d80e.chunk.js": "/receipt-app/static/js/787.2960d80e.chunk.js",
+    "index.html": "/receipt-app/index.html",
+    "main.06418c6d.js.map": "/receipt-app/static/js/main.06418c6d.js.map",
+    "787.2960d80e.chunk.js.map": "/receipt-app/static/js/787.2960d80e.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.31d6cfe0.css",
+    "static/js/main.06418c6d.js"
+  ]
+}
